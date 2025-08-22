@@ -5,11 +5,11 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>Data for Society: {{ page.title }}</title>
 			<meta name="description" content="{{ site.description | default: 'Data for Society - Research organization advancing data science for social good' }}">
-			<link rel="icon" type="image/png" href="/assets/img/png/logo-color.png">
+			<link rel="icon" type="image/png" href="{{ '/assets/img/png/logo-color.png' | relative_url }}">
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<link rel="stylesheet" type="text/css" href="{{ '/css/main.css' | relative_url }}">
 		</head>
 		<body>
 			<nav role="navigation" aria-label="Main navigation">
@@ -29,7 +29,7 @@
 			<main class="container">
 				{% if page.show_logo %}
 				<div class="logo-header">
-					<img src="/assets/img/svg/logo-color.svg" alt="Data for Society Logo" class="site-logo" />
+					<img src="{{ '/assets/img/svg/logo-color.svg' | relative_url }}" alt="Data for Society Logo" class="site-logo" />
 				</div>
 				{% endif %}
 				{{ content }}
