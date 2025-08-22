@@ -1,0 +1,22 @@
+# Site settings
+title: Data for Society
+description: Research organization advancing data science for social good
+baseurl: ""
+url: "http://localhost:4000"
+author:
+  name: Data for Society
+  email: contact@dataforsociety.org
+
+gems:
+  - jekyll-sitemap
+
+# Build settings
+markdown: kramdown
+
+sass:
+  load_paths:
+    - css
+
+collections:
+  projects:
+    output: true

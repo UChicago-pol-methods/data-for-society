@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Data for Society: {{ page.title }}</title>
+			<meta name="description" content="{{ site.description | default: 'Data for Society - Research organization advancing data science for social good' }}">
+			<link rel="icon" type="image/png" href="/assets/img/png/logo-color.png">
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+		</head>
+		<body>
+			<nav role="navigation" aria-label="Main navigation">
+	    		<ul>
+	        		<li><a href="/" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+	        		<li><a href="/research" {% if page.url contains 'research' %}class="active"{% endif %}>Research</a></li>
+	        		<li><a href="/team" {% if page.url contains 'team' %}class="active"{% endif %}>Team</a></li>
+	        		<li><a href="/contact" {% if page.url contains 'contact' %}class="active"{% endif %}>Contact</a></li>
+	        		<li>
+	        			<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+	        				<span class="sun-icon">☀️</span>
+	        				<span class="moon-icon">🌙</span>
+	        			</button>
+	        		</li>
+	    		</ul>
+			</nav>
+			<main class="container">
+				{% if page.show_logo %}
+				<div class="logo-header">
+					<img src="/assets/img/svg/logo-color.svg" alt="Data for Society Logo" class="site-logo" />
+				</div>
+				{% endif %}
+				{{ content }}
+			</main>
+			<footer role="contentinfo">
+	    		<ul>
+	        		<li><a href="mailto:dataforsociety@uchicago.edu" aria-label="Email Data for Society">Email</a></li>
+	        		<li><a href="https://www.facebook.com/dataforsocietyresearch" target="_blank" rel="noopener" aria-label="Data for Society Facebook">Facebook</a></li>
+	        		<li><a href="https://www.instagram.com/data4society" target="_blank" rel="noopener" aria-label="Data for Society Instagram">Instagram</a></li>
+				</ul>
+			</footer>
+			
+			{% include dark-mode.html %}
+		</body>
+	</html>
